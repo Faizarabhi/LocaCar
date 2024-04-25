@@ -5,4 +5,13 @@ controllers:
     type: attribute
 api_login_check:
     path: /api/login_check
-    
+
+# config/routes/api_platform.yaml
+api_cars_create:
+    path: /api/cars
+    controller: App\Controller\CarController::new
+    methods: [POST]
+    defaults:
+        _api_resource_class: App\Entity\Car
+        _api_collection_operation_name: post
+
